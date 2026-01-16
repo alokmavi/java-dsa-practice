@@ -4,3 +4,7 @@ Java + DSA daily practice
 - Java introduction
 - First Java program
 - Array sum program
+
+## Day 2
+- Java variables and data types
+- Maximum element in array
