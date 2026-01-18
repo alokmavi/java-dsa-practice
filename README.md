@@ -12,3 +12,7 @@ Java + DSA daily practice
 ## Day 3
 - Java operators
 - Reverse an array using two pointers
+
+## Day 4
+- Java if-else conditions
+- Count even and odd numbers in array
