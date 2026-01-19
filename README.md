@@ -16,3 +16,7 @@ Java + DSA daily practice
 ## Day 4
 - Java if-else conditions
 - Count even and odd numbers in array
+
+## Day 5
+- Java for and while loops
+- Star pattern using nested loops
