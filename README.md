@@ -20,3 +20,8 @@ Java + DSA daily practice
 ## Day 5
 - Java for and while loops
 - Star pattern using nested loops
+
+## Day 6
+- Java do-while loop
+- Number pattern using loops
+- Introduction to time complexity
