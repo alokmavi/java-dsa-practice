@@ -25,3 +25,7 @@ Java + DSA daily practice
 - Java do-while loop
 - Number pattern using loops
 - Introduction to time complexity
+
+## Day 7
+- Array revision
+- Min, count, and sorted array problems
