@@ -29,3 +29,8 @@ Java + DSA daily practice
 ## Day 7
 - Array revision
 - Min, count, and sorted array problems
+
+## Day 8
+- Organized array programs into folder
+- Sum of digits
+- Linear search
