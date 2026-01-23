@@ -34,3 +34,8 @@ Java + DSA daily practice
 - Organized array programs into folder
 - Sum of digits
 - Linear search
+
+## Day 9
+- Implemented binary search on sorted array
+- Compared linear search vs binary search
+- Understood O(n) vs O(log n) time complexity
