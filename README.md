@@ -39,3 +39,8 @@ Java + DSA daily practice
 - Implemented binary search on sorted array
 - Compared linear search vs binary search
 - Understood O(n) vs O(log n) time complexity
+
+## Day 10
+- Implemented Bubble Sort
+- Implemented Selection Sort
+- Learned basic sorting logic and time complexity
