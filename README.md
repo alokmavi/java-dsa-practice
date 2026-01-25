@@ -44,3 +44,7 @@ Java + DSA daily practice
 - Implemented Bubble Sort
 - Implemented Selection Sort
 - Learned basic sorting logic and time complexity
+
+### Day 11 
+- Sorting Algorithms
+- Insertion Sort
