@@ -33,7 +33,7 @@ Java + DSA daily practice
 ## Day 8
 - Organized array programs into folder
 - Sum of digits
-- Linear search
+- Linear search (O(n))
 
 ## Day 9
 - Implemented binary search on sorted array
@@ -45,6 +45,7 @@ Java + DSA daily practice
 - Implemented Selection Sort
 - Learned basic sorting logic and time complexity
 
-## Day 11 
-- Sorting Algorithms
+## Day 11
 - Insertion Sort
+- Time complexity of insertion sort
+
