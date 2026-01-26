@@ -49,3 +49,7 @@ Java + DSA daily practice
 - Insertion Sort
 - Time complexity of insertion sort
 
+## Day 12
+- Revised Linear Search implementation
+- Edge case handling
+- Interview-style explanation and complexity analysis
