@@ -1,27 +1,35 @@
-public class BinarySearch {
-    public static void main(String[] args) {
-        int[] arr = {2, 4, 6, 8, 10, 12};
-        int target = 10;
+package arrays;
 
+public class BinarySearch {
+
+    // Iterative Binary Search
+    // Time: O(log n), Space: O(1)
+    public static int binarySearch(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
-        boolean found = false;
 
         while (low <= high) {
-            int mid = (low + high) / 2;
+            int mid = low + (high - low) / 2;
 
             if (arr[mid] == target) {
-                found = true;
-                break;
+                return mid;
             } else if (arr[mid] < target) {
                 low = mid + 1;
             } else {
                 high = mid - 1;
             }
         }
+        return -1;
+    }
 
-        if (found) {
-            System.out.println("Element found");
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8, 10};
+        int target = 8;
+
+        int result = binarySearch(arr, target);
+
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
         } else {
             System.out.println("Element not found");
         }
