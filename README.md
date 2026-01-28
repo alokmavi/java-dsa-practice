@@ -53,3 +53,8 @@ Java + DSA daily practice
 - Revised Linear Search implementation
 - Edge case handling
 - Interview-style explanation and complexity analysis
+
+## Day 13
+- Binary Search (iterative)
+- Edge case handling
+- Time complexity: O(log n)
