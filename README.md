@@ -210,3 +210,9 @@ Java + DSA daily practice
 - **Algorithm:** Applied Floyd’s Cycle-Finding Algorithm (Tortoise and Hare).
 - **Logic:** If `fastTracker` and `slowTracker` pointer addresses eventually collide, a cycle is proven.
 - **Complexity:** $O(N)$ time, $O(1)$ space. Safe from infinite `while` loop execution faults.
+
+## Day 38: Locating Cycle Start Node
+- **Problem:** Find the exact node where a memory cycle begins.
+- **Algorithm:** Floyd's Algorithm (Phase 2).
+- **Logic:** After collision, reset `slowTracker` to head. Move both pointers at 1x speed. Their next collision is the cycle start.
+- **Complexity:** $O(N)$ time, $O(1)$ space.
