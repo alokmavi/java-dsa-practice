@@ -58,3 +58,8 @@ Java + DSA daily practice
 - Binary Search (iterative)
 - Edge case handling
 - Time complexity: O(log n)
+
+## Day 14
+- Java String basics
+- Reverse a string using two pointers
+- Count vowels and consonants
