@@ -63,3 +63,8 @@ Java + DSA daily practice
 - Java String basics
 - Reverse a string using two pointers
 - Count vowels and consonants
+
+## Day 15
+- String palindrome check
+- Character frequency in string
+- StringBuilder usage
