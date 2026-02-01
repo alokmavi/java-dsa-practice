@@ -68,3 +68,9 @@ Java + DSA daily practice
 - String palindrome check
 - Character frequency in string
 - StringBuilder usage
+
+## Day 16
+- Binary search revision
+- Edge cases in binary search
+- Handling mid, low, and high correctly
+- Common binary search mistakes
