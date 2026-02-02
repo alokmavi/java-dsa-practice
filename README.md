@@ -74,3 +74,8 @@ Java + DSA daily practice
 - Edge cases in binary search
 - Handling mid, low, and high correctly
 - Common binary search mistakes
+
+## Day 17
+- Binary Search (iterative & recursive)
+- First and last occurrence
+- Count occurrences using binary search
