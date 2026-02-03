@@ -79,3 +79,9 @@ Java + DSA daily practice
 - Binary Search (iterative & recursive)
 - First and last occurrence
 - Count occurrences using binary search
+
+## Day 18
+- Second largest element in array
+- Move all zeros to end
+- Rotate array left by k positions
+- Check if two arrays are equal
