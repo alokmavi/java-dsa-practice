@@ -85,3 +85,9 @@ Java + DSA daily practice
 - Move all zeros to end
 - Rotate array left by k positions
 - Check if two arrays are equal
+
+## Day 19 (Feb 2, 2026)
+- Frequency of elements using HashMap
+- First non-repeating element
+- Check if array contains duplicates using HashSet
+- Count distinct elements in array
