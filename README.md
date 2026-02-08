@@ -86,8 +86,14 @@ Java + DSA daily practice
 - Rotate array left by k positions
 - Check if two arrays are equal
 
-## Day 19 (Feb 2, 2026)
+## Day 19
 - Frequency of elements using HashMap
 - First non-repeating element
 - Check if array contains duplicates using HashSet
 - Count distinct elements in array
+
+## Day 20 
+- Reverse a string using two pointers
+- Check palindrome string
+- Count vowels and consonants
+- Check if two strings are anagrams
