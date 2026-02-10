@@ -97,3 +97,9 @@ Java + DSA daily practice
 - Check palindrome string
 - Count vowels and consonants
 - Check if two strings are anagrams
+
+## Day 21 
+- First non-repeating character using HashMap
+- Remove duplicate characters using LinkedHashSet
+- Longest common prefix
+- String compression
