@@ -103,3 +103,9 @@ Java + DSA daily practice
 - Remove duplicate characters using LinkedHashSet
 - Longest common prefix
 - String compression
+
+## Day 22 
+- Print numbers from 1 to N using recursion
+- Factorial using recursion
+- Fibonacci using recursion
+- Sum of digits using recursion
