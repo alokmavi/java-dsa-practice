@@ -109,3 +109,9 @@ Java + DSA daily practice
 - Factorial using recursion
 - Fibonacci using recursion
 - Sum of digits using recursion
+
+## Day 23 
+- Check if array is sorted using recursion
+- Find first occurrence of element (recursion)
+- Find last occurrence of element (recursion)
+- Print all occurrences of an element
