@@ -121,3 +121,8 @@ Java + DSA daily practice
 - Print all subsets of an array
 - Count subsequences with given sum
 - Print one subsequence with given sum
+
+## Day 26 
+- Generate permutations of an array using backtracking
+- Generate permutations of a string
+- Solved N-Queens problem using backtracking
