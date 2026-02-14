@@ -115,3 +115,9 @@ Java + DSA daily practice
 - Find first occurrence of element (recursion)
 - Find last occurrence of element (recursion)
 - Print all occurrences of an element
+
+## Day 24 
+- Print all subsequences of a string
+- Print all subsets of an array
+- Count subsequences with given sum
+- Print one subsequence with given sum
