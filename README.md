@@ -133,6 +133,12 @@ Java + DSA daily practice
 - Generate permutations of a string
 - Solved N-Queens problem using backtracking
 
+## Day 27 
+- Big-O time complexity overview
+- Compared O(n) vs O(n²) using code
+- Understood space complexity with examples
+- Common interview complexity traps
+
 ## Day 28
 - Understood that recursion internally uses a call stack
 - Simulated recursion using Java Stack
