@@ -126,3 +126,8 @@ Java + DSA daily practice
 - Generate permutations of an array using backtracking
 - Generate permutations of a string
 - Solved N-Queens problem using backtracking
+
+## Day 28
+- Understood that recursion internally uses a call stack
+- Simulated recursion using Java Stack
+- Prepared for Stack data structure
