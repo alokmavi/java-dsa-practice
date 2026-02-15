@@ -122,6 +122,12 @@ Java + DSA daily practice
 - Count subsequences with given sum
 - Print one subsequence with given sum
 
+## Day 25
+- Backtracking fundamentals
+- Generated all subsets (power set)
+- Generated permutations using recursion
+- Implemented basic combination sum problem
+
 ## Day 26 
 - Generate permutations of an array using backtracking
 - Generate permutations of a string
