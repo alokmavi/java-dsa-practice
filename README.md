@@ -131,3 +131,10 @@ Java + DSA daily practice
 - Understood that recursion internally uses a call stack
 - Simulated recursion using Java Stack
 - Prepared for Stack data structure
+
+## Day 29 - Stacks
+
+### Topics
+- Stack implementation using array
+- Valid Parentheses
+- Next Greater Element (Monotonic Stack)
