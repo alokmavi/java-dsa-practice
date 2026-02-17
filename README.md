@@ -150,3 +150,8 @@ Java + DSA daily practice
 - Stack implementation using array
 - Valid Parentheses
 - Next Greater Element (Monotonic Stack)
+
+## Day 30
+- New Data Structure: Queue.
+- Implementation: ArrayDeque (Java's standard modern queue).
+- Pattern: Breadth-First Generation (using a queue to generate combinations layer-by-layer).
