@@ -155,3 +155,11 @@ Java + DSA daily practice
 - New Data Structure: Queue.
 - Implementation: ArrayDeque (Java's standard modern queue).
 - Pattern: Breadth-First Generation (using a queue to generate combinations layer-by-layer).
+
+# Sliding Window Maximum (Monotonic Queue)
+**Problem:** Find max in moving window `k`. Naive $O(N \times K)$ is too slow.
+**Solution:** Use a Deque to store **indices** of useful candidates only.
+**Logic:** Maintain strictly **decreasing order**. If `current > back`, remove back (it's useless).
+**Algorithm:** 1. `pollFirst()` if index is out of window bounds.
+2. `pollLast()` if `current val > back val`.
+3. `offerLast(current index)`. Front is always the Max.
