@@ -163,3 +163,13 @@ Java + DSA daily practice
 **Algorithm:** 1. `pollFirst()` if index is out of window bounds.
 2. `pollLast()` if `current val > back val`.
 3. `offerLast(current index)`. Front is always the Max.
+
+## Day 31: Sliding Window & Monotonic Queue
+- Introduced the **Sliding Window** technique (processing fixed-size subarrays).
+- Solved **First Negative Integer** in every window of size `k`.
+- Solved **Sliding Window Maximum** using a Deque.
+- Learned the **Monotonic Queue** pattern:
+  - Storing indices instead of values to track window bounds.
+  - Removing elements from the **back** to maintain decreasing order (removing "useless" elements).
+  - Removing elements from the **front** when they slide out of the window.
+- **Key Insight:** A Deque allows $O(1)$ access to the maximum in a window, reducing total time from $O(N \times K)$ to $O(N)$.
