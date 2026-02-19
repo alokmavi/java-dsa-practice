@@ -156,7 +156,7 @@ Java + DSA daily practice
 - Implementation: ArrayDeque (Java's standard modern queue).
 - Pattern: Breadth-First Generation (using a queue to generate combinations layer-by-layer).
 
-# Sliding Window Maximum (Monotonic Queue)
+### Sliding Window Maximum (Monotonic Queue)
 **Problem:** Find max in moving window `k`. Naive $O(N \times K)$ is too slow.
 **Solution:** Use a Deque to store **indices** of useful candidates only.
 **Logic:** Maintain strictly **decreasing order**. If `current > back`, remove back (it's useless).
@@ -173,3 +173,9 @@ Java + DSA daily practice
   - Removing elements from the **back** to maintain decreasing order (removing "useless" elements).
   - Removing elements from the **front** when they slide out of the window.
 - **Key Insight:** A Deque allows $O(1)$ access to the maximum in a window, reducing total time from $O(N \times K)$ to $O(N)$.
+
+## Day 32
+- Designed a Stack using a single Queue (Push $O(N)$, Pop $O(1)$)
+- Designed a Queue using two Stacks (Amortized $O(1)$)
+- Handled edge cases with strict defensive coding exceptions
+- Mastered manual data flow reversal to simulate structural behaviors
