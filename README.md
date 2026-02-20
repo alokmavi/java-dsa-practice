@@ -179,3 +179,9 @@ Java + DSA daily practice
 - Designed a Queue using two Stacks (Amortized $O(1)$)
 - Handled edge cases with strict defensive coding exceptions
 - Mastered manual data flow reversal to simulate structural behaviors
+
+## Day 33
+- Transitioned from contiguous memory (Arrays) to scattered memory (Linked Lists).
+- Designed a custom Singly Linked List `Node` class.
+- Implemented $O(N)$ linear traversal and length calculation using references.
+- Implemented $O(1)$ head insertion, demonstrating structural advantages over arrays.
