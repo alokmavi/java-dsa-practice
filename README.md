@@ -185,3 +185,10 @@ Java + DSA daily practice
 - Designed a custom Singly Linked List `Node` class.
 - Implemented $O(N)$ linear traversal and length calculation using references.
 - Implemented $O(1)$ head insertion, demonstrating structural advantages over arrays.
+
+## Day 34: Tail Operations & Deletion
+- Implemented $O(N)$ tail insertion by traversing to `nextReference == null`.
+- Handled empty list edge cases (`headNode == null`) during insertion.
+- Implemented node deletion by value.
+- **Key Insight:** To delete a node in a Singly Linked List, you must stop traversing one node *before* the target to re-link `currentNode.nextReference = currentNode.nextReference.nextReference`.
+- Addressed the specific edge case of deleting the head node itself.
