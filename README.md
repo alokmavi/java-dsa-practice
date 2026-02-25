@@ -192,3 +192,9 @@ Java + DSA daily practice
 - Implemented node deletion by value.
 - **Key Insight:** To delete a node in a Singly Linked List, you must stop traversing one node *before* the target to re-link `currentNode.nextReference = currentNode.nextReference.nextReference`.
 - Addressed the specific edge case of deleting the head node itself.
+
+## Day 37: Linked List Cycle Detection
+- **Problem:** Determine if a Linked List contains an infinite memory loop.
+- **Algorithm:** Applied Floyd’s Cycle-Finding Algorithm (Tortoise and Hare).
+- **Logic:** If `fastTracker` and `slowTracker` pointer addresses eventually collide, a cycle is proven.
+- **Complexity:** $O(N)$ time, $O(1)$ space. Safe from infinite `while` loop execution faults.
