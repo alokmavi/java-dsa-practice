@@ -193,6 +193,12 @@ Java + DSA daily practice
 - **Key Insight:** To delete a node in a Singly Linked List, you must stop traversing one node *before* the target to re-link `currentNode.nextReference = currentNode.nextReference.nextReference`.
 - Addressed the specific edge case of deleting the head node itself.
 
+## Day 36: Middle of Linked List (Tortoise & Hare)
+- **Concept:** Solved middle node retrieval in a single pass using velocity-based dual pointers.
+- **Logic:** `fastPointer` moves two steps, `slowPointer` moves one.
+- **Boundary Handling:** Defensively checked `fastPointer != null && fastPointer.nextReference != null` to prevent traversal faults in even-length lists.
+- **Time/Space:** Strict $O(N)$ time and $O(1)$ space.
+
 ## Day 37: Linked List Cycle Detection
 - **Problem:** Determine if a Linked List contains an infinite memory loop.
 - **Algorithm:** Applied Floyd’s Cycle-Finding Algorithm (Tortoise and Hare).
