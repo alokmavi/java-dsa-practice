@@ -214,5 +214,5 @@ Java + DSA daily practice
 ## Day 38: Locating Cycle Start Node
 - **Problem:** Find the exact node where a memory cycle begins.
 - **Algorithm:** Floyd's Algorithm (Phase 2).
-- **Logic:** After collision, reset `slowTracker` to head. Move both pointers at 1x speed. Their next collision is the cycle start.
+- **Logic:** After the collision, reset `slowTracker` to head. Move both pointers at 1x speed. Their next collision is the cycle start.
 - **Complexity:** $O(N)$ time, $O(1)$ space.
