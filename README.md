@@ -193,6 +193,12 @@ Java + DSA daily practice
 - **Key Insight:** To delete a node in a Singly Linked List, you must stop traversing one node *before* the target to re-link `currentNode.nextReference = currentNode.nextReference.nextReference`.
 - Addressed the specific edge case of deleting the head node itself.
 
+## Day 35: Reverse a Linked List
+- **Problem:** Reverse a singly linked list in $O(N)$ time and $O(1)$ space.
+- **Logic:** Requires three pointers (`previousNode`, `currentNode`, `nextNode`) to prevent memory loss.
+- **Critical Step:** Always store `currentNode.nextReference` before changing it.
+- **Return Value:** `previousNode` becomes the new head when the loop terminates.
+
 ## Day 36: Middle of Linked List (Tortoise & Hare)
 - **Concept:** Solved middle node retrieval in a single pass using velocity-based dual pointers.
 - **Logic:** `fastPointer` moves two steps, `slowPointer` moves one.
