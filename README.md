@@ -216,3 +216,9 @@ Java + DSA daily practice
 - **Algorithm:** Floyd's Algorithm (Phase 2).
 - **Logic:** After the collision, reset `slowTracker` to head. Move both pointers at 1x speed. Their next collision is the cycle start.
 - **Complexity:** $O(N)$ time, $O(1)$ space.
+
+## Day 39: Merge Two Sorted Linked Lists
+- **Problem:** Combine two sorted lists into a single sorted list.
+- **Concept:** The "Zipper" technique utilizing two pointers.
+- **Pattern:** Deployed a `dummyAnchor` node to gracefully handle head-initialization and empty list edge cases.
+- **Efficiency:** $O(N + M)$ time to traverse both lists, $O(1)$ auxiliary space by strictly re-wiring existing memory references.
