@@ -222,3 +222,9 @@ Java + DSA daily practice
 - **Concept:** The "Zipper" technique utilizing two pointers.
 - **Pattern:** Deployed a `dummyAnchor` node to gracefully handle head-initialization and empty list edge cases.
 - **Efficiency:** $O(N + M)$ time to traverse both lists, $O(1)$ auxiliary space by strictly re-wiring existing memory references.
+
+## Day 40: Palindrome Linked List
+- **Problem:** Verify if a list is a palindrome in $O(N)$ time and strict $O(1)$ space.
+- **Architecture:** Compounded previous patterns: `findMiddle` + `reverseList`.
+- **Logic:** Reversed the second half in-place, compared dual pointers, then restored the list to its original state.
+- **Key Insight:** Modularizing helper methods keeps complex pointer logic readable and interview-ready.
