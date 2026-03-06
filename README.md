@@ -228,3 +228,9 @@ Java + DSA daily practice
 - **Architecture:** Compounded previous patterns: `findMiddle` + `reverseList`.
 - **Logic:** Reversed the second half in-place, compared dual pointers, then restored the list to its original state.
 - **Key Insight:** Modularizing helper methods keeps complex pointer logic readable and interview-ready.
+
+## Day 46: Breadth-First Search (BFS)
+- **Concept:** Horizontal tree traversal processing nodes by structural proximity to the root.
+- **Data Structure:** Utilized an explicit `Queue` (FIFO) instead of the recursive Call Stack.
+- **Pattern:** Captured queue `size()` prior to processing to strictly isolate nodes by their depth level.
+- **Complexity:** $O(N)$ execution time, $O(W)$ auxiliary space where $W$ is the maximum width of the tree.
