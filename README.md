@@ -229,6 +229,12 @@ Java + DSA daily practice
 - **Logic:** Reversed the second half in-place, compared dual pointers, then restored the list to its original state.
 - **Key Insight:** Modularizing helper methods keeps complex pointer logic readable and interview-ready.
 
+## Day 42: Reverse a Doubly Linked List
+- **Logic:** Iterate through the list and strictly swap `nextReference` and `prevReference` for each node.
+- **Trap Avoidance:** Advanced traversal by assigning `currentNode = currentNode.prevReference` after the swap.
+- **Complexity:** $O(N)$ time complexity, strict $O(1)$ auxiliary space.
+- **Edge Cases:** Handled `null` head and single-node structures defensively.
+
 ## Day 46: Breadth-First Search (BFS)
 - **Concept:** Horizontal tree traversal processing nodes by structural proximity to the root.
 - **Data Structure:** Utilized an explicit `Queue` (FIFO) instead of the recursive Call Stack.
