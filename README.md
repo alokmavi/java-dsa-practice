@@ -240,3 +240,9 @@ Java + DSA daily practice
 - **Data Structure:** Utilized an explicit `Queue` (FIFO) instead of the recursive Call Stack.
 - **Pattern:** Captured queue `size()` prior to processing to strictly isolate nodes by their depth level.
 - **Complexity:** $O(N)$ execution time, $O(W)$ auxiliary space where $W$ is the maximum width of the tree.
+
+## Day 47: Maximum Depth of Binary Tree
+- **Problem:** Calculate the longest path from the root node down to the farthest leaf node.
+- **Pattern:** Deployed Postorder DFS traversal to calculate depth bottom-up.
+- **Logic:** Base case returns 0. Recursive step returns `Math.max(leftDepth, rightDepth) + 1`.
+- **Complexity:** $O(N)$ time to visit every node, $O(H)$ auxiliary space for the recursion stack (where $H$ is the tree height).
