@@ -246,3 +246,9 @@ Java + DSA daily practice
 - **Pattern:** Deployed Postorder DFS traversal to calculate depth bottom-up.
 - **Logic:** Base case returns 0. Recursive step returns `Math.max(leftDepth, rightDepth) + 1`.
 - **Complexity:** $O(N)$ time to visit every node, $O(H)$ auxiliary space for the recursion stack (where $H$ is the tree height).
+
+## Day 48: Diameter of a Binary Tree
+- **Problem:** Find the longest path between any two nodes (may not pass through root).
+- **Architecture:** Leveraged Postorder depth calculation while simultaneously tracking a global maximum.
+- **State Management:** Used a 1-element array `int[]` to bypass Java's pass-by-value limitation without relying on unsafe static variables.
+- **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for recursive frames.
