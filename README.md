@@ -252,3 +252,9 @@ Java + DSA daily practice
 - **Architecture:** Leveraged Postorder depth calculation while simultaneously tracking a global maximum.
 - **State Management:** Used a 1-element array `int[]` to bypass Java's pass-by-value limitation without relying on unsafe static variables.
 - **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for recursive frames.
+
+## Day 49: Invert a Binary Tree
+- **Problem:** Mirror the structural memory references of an entire tree.
+- **Logic:** Deployed Postorder DFS. Saved original left/right child references before recursive reassignment to prevent memory loss.
+- **Mutation:** Modified `currentNode.leftReference` to point to the inverted right subtree, and vice versa.
+- **Complexity:** $O(N)$ execution time to visit all nodes, $O(H)$ space for the recursive call stack.
