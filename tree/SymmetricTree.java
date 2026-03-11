@@ -62,7 +62,7 @@ public class SymmetricTree {
 
         /*
          * Architecture:
-         * 1
+         *   1
          * /   \
          * 2     2
          * / \   / \
@@ -82,7 +82,7 @@ public class SymmetricTree {
 
         /*
          * Architecture:
-         * 1
+         *   1
          * /   \
          * 2     2
          * \     \
