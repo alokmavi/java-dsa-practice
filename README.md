@@ -258,3 +258,9 @@ Java + DSA daily practice
 - **Logic:** Deployed Postorder DFS. Saved original left/right child references before recursive reassignment to prevent memory loss.
 - **Mutation:** Modified `currentNode.leftReference` to point to the inverted right subtree, and vice versa.
 - **Complexity:** $O(N)$ execution time to visit all nodes, $O(H)$ space for the recursive call stack.
+
+## Day 51: Symmetric Tree Check
+- **Problem:** Verify if a tree's structure and values are a perfect mirror reflection around its center.
+- **Pattern:** Divergent parallel recursion. `Alpha` traversed left while `Beta` traversed right.
+- **Logic:** Validated `leftBranch.nodeValue == rightBranch.nodeValue`, then checked `outerEdges` and `innerEdges` recursively.
+- **Complexity:** O(N) execution time, O(H) auxiliary space for the call stack.
