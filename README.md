@@ -264,3 +264,9 @@ Java + DSA daily practice
 - **Pattern:** Divergent parallel recursion. `Alpha` traversed left while `Beta` traversed right.
 - **Logic:** Validated `leftBranch.nodeValue == rightBranch.nodeValue`, then checked `outerEdges` and `innerEdges` recursively.
 - **Complexity:** O(N) execution time, O(H) auxiliary space for the call stack.
+
+## Day 52: Balanced Binary Tree Detection
+- **Problem:** Verify that no node possesses subtrees with a height differential strictly greater than 1.
+- **Pattern:** Upgraded Postorder depth calculation to $O(N)$ bottom-up verification.
+- **Error Propagation:** Utilized `-1` as an early-exit signal to avoid $O(N^2)$ redundant re-evaluations.
+- **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for the recursive call stack.
