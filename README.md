@@ -259,6 +259,12 @@ Java + DSA daily practice
 - **Mutation:** Modified `currentNode.leftReference` to point to the inverted right subtree, and vice versa.
 - **Complexity:** $O(N)$ execution time to visit all nodes, $O(H)$ space for the recursive call stack.
 
+## Day 50: Identical Trees
+- **Problem:** Verify strict structural and value equivalence between two distinct Binary Trees.
+- **Pattern:** Synchronized parallel recursion. Passed two memory references simultaneously through the call stack.
+- **Boundary Logic:** Validated `null` states explicitly before evaluating `nodeValue` to guarantee memory safety.
+- **Complexity:** $O(\min(N, M))$ execution time. The algorithm short-circuits and returns `false` at the first mismatch.
+
 ## Day 51: Symmetric Tree Check
 - **Problem:** Verify if a tree's structure and values are a perfect mirror reflection around its center.
 - **Pattern:** Divergent parallel recursion. `Alpha` traversed left while `Beta` traversed right.
