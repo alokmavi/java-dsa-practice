@@ -282,3 +282,9 @@ Java + DSA daily practice
 - **Pattern:** Upgraded Postorder depth calculation to $O(N)$ bottom-up verification.
 - **Error Propagation:** Utilized `-1` as an early-exit signal to avoid $O(N^2)$ redundant re-evaluations.
 - **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for the recursive call stack.
+
+## Day 57: Kth Smallest Element in a BST
+- **Concept:** Exploited the strict ascending order of an Inorder BST traversal to locate ranked elements.
+- **Optimization:** Implemented an early-exit short-circuit to abort the traversal exactly when the Kth element is found, bypassing $O(N)$ full-tree scans.
+- **State Management:** Mutated a 2-element array across recursive frames to track countdown state and capture the target reference.
+- **Complexity:** Time complexity is $O(H + K)$ where $H$ is the depth to reach the minimum node. Auxiliary space is $O(H)$ for the recursion stack.
