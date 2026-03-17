@@ -283,6 +283,12 @@ Java + DSA daily practice
 - **Error Propagation:** Utilized `-1` as an early-exit signal to avoid $O(N^2)$ redundant re-evaluations.
 - **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for the recursive call stack.
 
+## Day 55: BST Node Deletion
+- **Problem:** Remove a specific node without violating the strict Left < Root < Right mathematical constraint.
+- **Complexity Management:** Segmented logic into three structural cases: Leaf, Single Child, and Dual Children.
+- **Resolution (Case 3):** Overwrote target value with its Inorder Successor (minimum node of right subtree), then recursively deleted the successor.
+- **Efficiency:** $O(H)$ time for search and localized structural re-wiring, where $H$ is the tree height.
+
 ## Day 56: Validate Binary Search Tree
 - **Problem:** Ensure a standard binary tree strictly adheres to the global Left < Root < Right structural constraint.
 - **Vulnerability Avoidance:** Bypassed the local-comparison trap by passing dynamic structural boundaries down the recursive call stack.
