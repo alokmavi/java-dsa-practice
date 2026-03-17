@@ -283,6 +283,12 @@ Java + DSA daily practice
 - **Error Propagation:** Utilized `-1` as an early-exit signal to avoid $O(N^2)$ redundant re-evaluations.
 - **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for the recursive call stack.
 
+## Day 56: Validate Binary Search Tree
+- **Problem:** Ensure a standard binary tree strictly adheres to the global Left < Root < Right structural constraint.
+- **Vulnerability Avoidance:** Bypassed the local-comparison trap by passing dynamic structural boundaries down the recursive call stack.
+- **Defensive Sizing:** Deployed `Long` primitives to prevent integer overflow collisions during extreme-value edge cases.
+- **Complexity:** O(N) traversal time, O(H) auxiliary space for recursive boundary tracking.
+
 ## Day 57: Kth Smallest Element in a BST
 - **Concept:** Exploited the strict ascending order of an Inorder BST traversal to locate ranked elements.
 - **Optimization:** Implemented an early-exit short-circuit to abort the traversal exactly when the Kth element is found, bypassing $O(N)$ full-tree scans.
