@@ -283,6 +283,12 @@ Java + DSA daily practice
 - **Error Propagation:** Utilized `-1` as an early-exit signal to avoid $O(N^2)$ redundant re-evaluations.
 - **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for the recursive call stack.
 
+## Day 54: Binary Search Tree (BST) Search & Insert
+- **Concept:** Applied a systemic structural constraint (Left < Root < Right) to enable $O(\log N)$ search operations.
+- **Validation:** Utilized Inorder DFS traversal to verify structural integrity (outputs strictly sorted data).
+- **Efficiency:** Implemented iterative search to guarantee $O(1)$ auxiliary space during read-only access.
+- **Insertion Logic:** Deployed recursive reassignment to wire new leaf nodes at the correct semantic depth.
+
 ## Day 55: BST Node Deletion
 - **Problem:** Remove a specific node without violating the strict Left < Root < Right mathematical constraint.
 - **Complexity Management:** Segmented logic into three structural cases: Leaf, Single Child, and Dual Children.
