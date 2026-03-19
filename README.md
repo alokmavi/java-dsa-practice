@@ -312,3 +312,9 @@ Java + DSA daily practice
 - **Optimization:** Implemented an early-exit short-circuit to abort the traversal exactly when the Kth element is found, bypassing $O(N)$ full-tree scans.
 - **State Management:** Mutated a 2-element array across recursive frames to track countdown state and capture the target reference.
 - **Complexity:** Time complexity is $O(H + K)$ where $H$ is the depth to reach the minimum node. Auxiliary space is $O(H)$ for the recursion stack.
+
+## Day 60: Min-Heap Extraction & Heapify Down
+- **Concept:** Extracted the root node while preserving the complete binary tree architecture.
+- **Mechanism:** Transplanted the final leaf to the root and executed an iterative `bubbleDown` to restore the systemic constraint.
+- **Defensive Design:** Guarded against memory underflow when attempting to extract from an empty operational boundary.
+- **Complexity:** $O(\log N)$ extraction time, strict $O(1)$ auxiliary space.
