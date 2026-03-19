@@ -313,6 +313,12 @@ Java + DSA daily practice
 - **State Management:** Mutated a 2-element array across recursive frames to track countdown state and capture the target reference.
 - **Complexity:** Time complexity is $O(H + K)$ where $H$ is the depth to reach the minimum node. Auxiliary space is $O(H)$ for the recursion stack.
 
+## Day 59: Min-Heap Architecture & Insertion
+- **Concept:** Modeled a Complete Binary Tree utilizing strict contiguous array index arithmetic (omitting memory-heavy node references).
+- **Constraint:** Maintained the Min-Heap property (Parent $\le$ Children) using algorithmic `bubbleUp` operations.
+- **Defensive Design:** Implemented proactive capacity bounds checking to prevent `ArrayIndexOutOfBoundsException` on memory overflow.
+- **Complexity:** $O(\log N)$ time for insertion, strict $O(1)$ auxiliary space during the index traversal.
+
 ## Day 60: Min-Heap Extraction & Heapify Down
 - **Concept:** Extracted the root node while preserving the complete binary tree architecture.
 - **Mechanism:** Transplanted the final leaf to the root and executed an iterative `bubbleDown` to restore the systemic constraint.
