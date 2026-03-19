@@ -283,6 +283,12 @@ Java + DSA daily practice
 - **Error Propagation:** Utilized `-1` as an early-exit signal to avoid $O(N^2)$ redundant re-evaluations.
 - **Complexity:** $O(N)$ execution time, $O(H)$ auxiliary space for the recursive call stack.
 
+## Day 53: Lowest Common Ancestor (Binary Tree)
+- **Problem:** Locate the deepest shared parent node of two distinct target nodes.
+- **Pattern:** Postorder DFS traversal returning discovered memory references upwards.
+- **Decision Logic:** If both left and right subtrees return non-null references, the current node is the convergence point (LCA).
+- **Complexity:** $O(N)$ execution time traversing the structure, $O(H)$ auxiliary space for stack frames.
+
 ## Day 54: Binary Search Tree (BST) Search & Insert
 - **Concept:** Applied a systemic structural constraint (Left < Root < Right) to enable $O(\log N)$ search operations.
 - **Validation:** Utilized Inorder DFS traversal to verify structural integrity (outputs strictly sorted data).
