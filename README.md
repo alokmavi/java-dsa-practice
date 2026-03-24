@@ -324,3 +324,9 @@ Java + DSA daily practice
 - **Mechanism:** Transplanted the final leaf to the root and executed an iterative `bubbleDown` to restore the systemic constraint.
 - **Defensive Design:** Guarded against memory underflow when attempting to extract from an empty operational boundary.
 - **Complexity:** $O(\log N)$ extraction time, strict $O(1)$ auxiliary space.
+
+## Day 61: Kth Largest Element
+- **Problem:** Extract a rank-specific target from an unsorted data stream without sorting the entire dataset.
+- **Data Structure:** Utilized `java.util.PriorityQueue` as a bounded Min-Heap.
+- **Logic:** Maintained a strict size constraint of $K$. By constantly evicting the systemic minimum, only the $K$ maximum elements survived processing.
+- **Complexity:** $O(N \log K)$ execution time, $O(K)$ auxiliary space. Superior to $O(N \log N)$ standard sorting, particularly when $K \ll N$.
