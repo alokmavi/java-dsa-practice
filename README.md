@@ -330,3 +330,9 @@ Java + DSA daily practice
 - **Data Structure:** Utilized `java.util.PriorityQueue` as a bounded Min-Heap.
 - **Logic:** Maintained a strict size constraint of $K$. By constantly evicting the systemic minimum, only the $K$ maximum elements survived processing.
 - **Complexity:** $O(N \log K)$ execution time, $O(K)$ auxiliary space. Superior to $O(N \log N)$ standard sorting, particularly when $K \ll N$.
+
+## Day 62: Merge K Sorted Lists
+- **Problem:** Combine an arbitrary number of sorted linked lists into a single continuous sorted list.
+- **Architecture:** Fused Linked List pointer traversal with a Min-Heap.
+- **Logic:** Seeded the heap with all list heads. As the minimum node is extracted and appended to the result, its immediate `nextReference` is pushed into the heap to replenish the evaluation pool.
+- **Complexity:** $O(N \log K)$ execution time where $N$ is total nodes and $K$ is the number of lists. Auxiliary space is strictly bounded to $O(K)$ for the heap.
