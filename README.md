@@ -336,3 +336,9 @@ Java + DSA daily practice
 - **Architecture:** Fused Linked List pointer traversal with a Min-Heap.
 - **Logic:** Seeded the heap with all list heads. As the minimum node is extracted and appended to the result, its immediate `nextReference` is pushed into the heap to replenish the evaluation pool.
 - **Complexity:** $O(N \log K)$ execution time where $N$ is total nodes and $K$ is the number of lists. Auxiliary space is strictly bounded to $O(K)$ for the heap.
+
+## Day 63: Graph Architecture & BFS
+- **Concept:** Modeled an unconstrained network topology using a `HashMap` and `List` based Adjacency List.
+- **Traversal:** Implemented Breadth-First Search using a `Queue` for level-by-level radial expansion.
+- **Cycle Mitigation:** Deployed a `HashSet` to establish a strict `visitedRegistry`, preventing infinite execution loops.
+- **Complexity:** $O(V + E)$ execution time where $V$ is total vertices and $E$ is total edges. Auxiliary space is bounded to $O(V)$ for the queue and registry.
