@@ -342,3 +342,9 @@ Java + DSA daily practice
 - **Traversal:** Implemented Breadth-First Search using a `Queue` for level-by-level radial expansion.
 - **Cycle Mitigation:** Deployed a `HashSet` to establish a strict `visitedRegistry`, preventing infinite execution loops.
 - **Complexity:** $O(V + E)$ execution time where $V$ is total vertices and $E$ is total edges. Auxiliary space is bounded to $O(V)$ for the queue and registry.
+
+## Day 64: Graph Depth-First Search (DFS)
+- **Concept:** Navigated graph topology vertically using recursive backtracking.
+- **Architecture:** Maintained a persistent `visitedRegistry` across recursive frames to serve as the systemic base case and prevent cycle-induced stack overflows.
+- **Pattern:** Wrapper method initialized state, private helper method executed the call stack descent.
+- **Complexity:** $O(V + E)$ execution time. Auxiliary space is bounded to $O(V)$ for both the recursion stack and the visited registry.
