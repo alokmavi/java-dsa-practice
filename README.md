@@ -348,3 +348,9 @@ Java + DSA daily practice
 - **Architecture:** Maintained a persistent `visitedRegistry` across recursive frames to serve as the systemic base case and prevent cycle-induced stack overflows.
 - **Pattern:** Wrapper method initialized state, private helper method executed the call stack descent.
 - **Complexity:** $O(V + E)$ execution time. Auxiliary space is bounded to $O(V)$ for both the recursion stack and the visited registry.
+
+## Day 65: Directed Graph Cycle Detection
+- **Concept:** Modeled directional dependencies and verified structural integrity against infinite resolution loops.
+- **State Management:** Differentiated between a `globalVisitedRegistry` (for $O(1)$ pruning of verified safe paths) and an `activePathRegistry` (to track the current recursive descent).
+- **Logic:** Identified cycles exclusively when a traversal edge points to a node currently residing in the `activePathRegistry` (a back-edge).
+- **Complexity:** $O(V + E)$ execution time, $O(V)$ auxiliary space for registries and call stack.
