@@ -372,3 +372,9 @@ Java + DSA daily practice
 - **Traversal:** Utilized linear matrix scanning coupled with orthogonal Depth-First Search for neighbor discovery.
 - **State Optimization:** Mutated discovered nodes in-place (`'1'` $\rightarrow$ `'0'`) to eliminate redundant traversals without allocating an external memory registry.
 - **Complexity:** $O(M \times N)$ execution time where $M$ is rows and $N$ is columns. Auxiliary space is bounded to $O(M \times N)$ in the absolute worst-case scenario (a grid entirely filled with land) due to the recursive call stack.
+
+## Day 69: Multi-Source BFS (Rotting Oranges)
+- **Problem:** Calculate the minimum time required for a radial effect to cover an entire implicit graph.
+- **Architecture:** Bypassed nested loop simulations by seeding a `Queue` with all initial source nodes simultaneously.
+- **State Management:** Used an integer array `int[][] directionalVectors` to cleanly execute orthogonal memory bounds checking.
+- **Complexity:** $O(M \times N)$ execution time, as each cell is visited and mutated exactly once. $O(M \times N)$ auxiliary space for the Queue in the worst-case scenario.
