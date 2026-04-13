@@ -354,3 +354,9 @@ Java + DSA daily practice
 - **State Management:** Differentiated between a `globalVisitedRegistry` (for $O(1)$ pruning of verified safe paths) and an `activePathRegistry` (to track the current recursive descent).
 - **Logic:** Identified cycles exclusively when a traversal edge points to a node currently residing in the `activePathRegistry` (a back-edge).
 - **Complexity:** $O(V + E)$ execution time, $O(V)$ auxiliary space for registries and call stack.
+
+## Day 66: Topological Sort (Kahn's Algorithm)
+- **Problem:** Determine a linear execution order for a Directed Acyclic Graph (DAG) respecting all dependency constraints.
+- **Mechanism:** Implemented Kahn's Algorithm using an `inDegree` tracker and a Breadth-First Search `Queue`.
+- **Validation:** Utilized the final output size to guarantee the absence of circular dependencies dynamically.
+- **Complexity:** $O(V + E)$ execution time as every vertex and edge is evaluated exactly once. $O(V)$ auxiliary space for the queue and degree mapping.
