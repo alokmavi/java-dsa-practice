@@ -360,3 +360,9 @@ Java + DSA daily practice
 - **Mechanism:** Implemented Kahn's Algorithm using an `inDegree` tracker and a Breadth-First Search `Queue`.
 - **Validation:** Utilized the final output size to guarantee the absence of circular dependencies dynamically.
 - **Complexity:** $O(V + E)$ execution time as every vertex and edge is evaluated exactly once. $O(V)$ auxiliary space for the queue and degree mapping.
+
+## Day 67: Dijkstra's Algorithm
+- **Problem:** Calculate the absolute minimum travel cost from a single origin to all available vertices in a weighted network topology.
+- **Architecture:** Merged Graph Adjacency Lists with a Min-Heap (`PriorityQueue`) to enforce a greedy traversal sequence based on lowest cumulative cost.
+- **Constraint Management:** Implemented strict path relaxation and stale-entry pruning to avoid redundant sub-network processing.
+- **Complexity:** $O((V + E) \log V)$ execution time, where $V$ is vertices and $E$ is edges. The logarithmic factor originates from the Min-Heap operations.
