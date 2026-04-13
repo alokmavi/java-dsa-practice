@@ -366,3 +366,9 @@ Java + DSA daily practice
 - **Architecture:** Merged Graph Adjacency Lists with a Min-Heap (`PriorityQueue`) to enforce a greedy traversal sequence based on lowest cumulative cost.
 - **Constraint Management:** Implemented strict path relaxation and stale-entry pruning to avoid redundant sub-network processing.
 - **Complexity:** $O((V + E) \log V)$ execution time, where $V$ is vertices and $E$ is edges. The logarithmic factor originates from the Min-Heap operations.
+
+## Day 68: Number of Islands
+- **Problem:** Calculate the total number of distinct connected components within an implicit 2D graph.
+- **Traversal:** Utilized linear matrix scanning coupled with orthogonal Depth-First Search for neighbor discovery.
+- **State Optimization:** Mutated discovered nodes in-place (`'1'` $\rightarrow$ `'0'`) to eliminate redundant traversals without allocating an external memory registry.
+- **Complexity:** $O(M \times N)$ execution time where $M$ is rows and $N$ is columns. Auxiliary space is bounded to $O(M \times N)$ in the absolute worst-case scenario (a grid entirely filled with land) due to the recursive call stack.
