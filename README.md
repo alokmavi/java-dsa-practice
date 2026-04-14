@@ -378,3 +378,9 @@ Java + DSA daily practice
 - **Architecture:** Bypassed nested loop simulations by seeding a `Queue` with all initial source nodes simultaneously.
 - **State Management:** Used an integer array `int[][] directionalVectors` to cleanly execute orthogonal memory bounds checking.
 - **Complexity:** $O(M \times N)$ execution time, as each cell is visited and mutated exactly once. $O(M \times N)$ auxiliary space for the Queue in the worst-case scenario.
+
+## Day 70: Climbing Stairs (Intro to DP)
+- **Problem:** Calculate the total distinct combinations of 1-step and 2-step increments to reach a target integer.
+- **Concept:** Translated an exponential overlapping subproblem ($O(2^N)$ recursion) into a linear Bottom-Up mathematical sequence.
+- **Optimization:** Discarded the $O(N)$ tabulation array in favor of two sliding memory pointers, tracking only the strictly necessary historical states.
+- **Complexity:** $O(N)$ execution time, strict $O(1)$ auxiliary space.
