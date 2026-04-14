@@ -384,3 +384,9 @@ Java + DSA daily practice
 - **Concept:** Translated an exponential overlapping subproblem ($O(2^N)$ recursion) into a linear Bottom-Up mathematical sequence.
 - **Optimization:** Discarded the $O(N)$ tabulation array in favor of two sliding memory pointers, tracking only the strictly necessary historical states.
 - **Complexity:** $O(N)$ execution time, strict $O(1)$ auxiliary space.
+
+## Day 71: House Robber (1D DP Selection)
+- **Problem:** Maximize total integer extraction from an array given the constraint that adjacent indices cannot be concurrently selected.
+- **Concept:** Modeled the Optimal Substructure decision: `max(skipCurrent, takeCurrent + maxTwoStatesPrior)`.
+- **Optimization:** Eradicated the $O(N)$ tabulation matrix, utilizing two sliding state variables to cache the rolling maxima.
+- **Complexity:** $O(N)$ execution time through a single linear scan. Strict $O(1)$ auxiliary space constraint maintained.
