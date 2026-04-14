@@ -402,3 +402,9 @@ Java + DSA daily practice
 - **Concept:** Modeled the 2D overlapping subproblem where the state of cell `(r, c)` is the sum of `(r-1, c)` and `(r, c-1)`.
 - **Memory Optimization:** Collapsed the standard $O(M \times N)$ tabulation matrix into a 1D `horizontalStateBoundary` array by exploiting the top-down sequential dependency.
 - **Complexity:** $O(M \times N)$ execution time. Auxiliary space strictly bounded to $O(N)$ where $N$ is the number of columns.
+
+## Day 74: Unique Paths II (Obstacles)
+- **Problem:** Calculate unique traversal routes through a grid while navigating physical blockages.
+- **Concept:** Expanded the 2D DP state transition to accommodate systemic failure points (`Paths(r, c) = 0` if obstacle exists).
+- **Optimization:** Refactored the initialization logic to allow the $O(N)$ sliding state array to process the 0th row dynamically, preventing manual out-of-bounds checks.
+- **Complexity:** $O(M \times N)$ execution time scanning the matrix. Strict $O(N)$ auxiliary space maintained.
