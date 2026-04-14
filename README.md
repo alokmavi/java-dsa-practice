@@ -396,3 +396,9 @@ Java + DSA daily practice
 - **Concept:** Deconstructed a complex cyclic constraint into two mutually exclusive linear subproblems.
 - **Architecture:** Reused the sliding-window state optimizer from Day 71 to process the disjoint sub-arrays (`0` to `N-2` vs `1` to `N-1`).
 - **Complexity:** $O(N)$ execution time, consisting of two isolated linear scans. Strict $O(1)$ auxiliary space constraint maintained.
+
+## Day 73: Unique Paths (2D DP)
+- **Problem:** Calculate the total combinatorial paths from the top-left to the bottom-right of a grid given strict directional constraints (Right and Down).
+- **Concept:** Modeled the 2D overlapping subproblem where the state of cell `(r, c)` is the sum of `(r-1, c)` and `(r, c-1)`.
+- **Memory Optimization:** Collapsed the standard $O(M \times N)$ tabulation matrix into a 1D `horizontalStateBoundary` array by exploiting the top-down sequential dependency.
+- **Complexity:** $O(M \times N)$ execution time. Auxiliary space strictly bounded to $O(N)$ where $N$ is the number of columns.
