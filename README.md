@@ -390,3 +390,9 @@ Java + DSA daily practice
 - **Concept:** Modeled the Optimal Substructure decision: `max(skipCurrent, takeCurrent + maxTwoStatesPrior)`.
 - **Optimization:** Eradicated the $O(N)$ tabulation matrix, utilizing two sliding state variables to cache the rolling maxima.
 - **Complexity:** $O(N)$ execution time through a single linear scan. Strict $O(1)$ auxiliary space constraint maintained.
+
+## Day 72: House Robber II (Circular 1D DP)
+- **Problem:** Maximize total integer extraction from a circular array where index `0` and `N-1` are structurally adjacent.
+- **Concept:** Deconstructed a complex cyclic constraint into two mutually exclusive linear subproblems.
+- **Architecture:** Reused the sliding-window state optimizer from Day 71 to process the disjoint sub-arrays (`0` to `N-2` vs `1` to `N-1`).
+- **Complexity:** $O(N)$ execution time, consisting of two isolated linear scans. Strict $O(1)$ auxiliary space constraint maintained.
