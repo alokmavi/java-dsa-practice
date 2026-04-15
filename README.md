@@ -414,3 +414,9 @@ Java + DSA daily practice
 - **Architecture:** Applied a 2D Dynamic Programming matrix transitioning via `Diagonal + 1` (on match) or `Max(Above, Left)` (on mismatch).
 - **Optimization:** Collapsed the $O(M \times N)$ tabulation matrix into a 1D `horizontalStateBoundary` array. Orchestrated a sliding variable (`previousDiagonalState`) to prevent premature overwriting of necessary subproblem data.
 - **Complexity:** $O(M \times N)$ execution time. Auxiliary space strictly bounded to $O(\min(M, N))$ by dynamically swapping the sequence parameters based on string length.
+
+## Day 76: Edit Distance (Levenshtein)
+- **Problem:** Calculate the minimum operational cost (Insert, Delete, Replace) required to mutate a source string into a target string.
+- **Concept:** Modeled the DP state transitions evaluating three distinct historical routing paths upon character mismatch: `1 + min(Left, Above, Diagonal)`.
+- **Memory Optimization:** Maintained the $O(N)$ sliding array architecture from the LCS implementation, actively mutating the row initialization state to track target deletions.
+- **Complexity:** $O(M \times N)$ execution time where $M$ and $N$ are the respective string lengths. Auxiliary space is strictly bounded to $O(N)$.
