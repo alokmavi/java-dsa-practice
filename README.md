@@ -408,3 +408,9 @@ Java + DSA daily practice
 - **Concept:** Expanded the 2D DP state transition to accommodate systemic failure points (`Paths(r, c) = 0` if obstacle exists).
 - **Optimization:** Refactored the initialization logic to allow the $O(N)$ sliding state array to process the 0th row dynamically, preventing manual out-of-bounds checks.
 - **Complexity:** $O(M \times N)$ execution time scanning the matrix. Strict $O(N)$ auxiliary space maintained.
+
+## Day 75: Longest Common Subsequence
+- **Problem:** Calculate the maximum disjoint sequence alignment between two strings.
+- **Architecture:** Applied a 2D Dynamic Programming matrix transitioning via `Diagonal + 1` (on match) or `Max(Above, Left)` (on mismatch).
+- **Optimization:** Collapsed the $O(M \times N)$ tabulation matrix into a 1D `horizontalStateBoundary` array. Orchestrated a sliding variable (`previousDiagonalState`) to prevent premature overwriting of necessary subproblem data.
+- **Complexity:** $O(M \times N)$ execution time. Auxiliary space strictly bounded to $O(\min(M, N))$ by dynamically swapping the sequence parameters based on string length.
