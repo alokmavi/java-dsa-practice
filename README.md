@@ -432,3 +432,9 @@ Java + DSA daily practice
 - **Concept:** Reduced a complex dual-state combinatorial problem into a standard subset-sum search by deriving the mathematical target $P = (Target + Sum) / 2$.
 - **Architecture:** Re-deployed the reverse-traversal 1D array DP engine from the 0/1 Knapsack algorithm, modifying the state transition to summate valid paths rather than maximizing values.
 - **Complexity:** $O(N \times P)$ execution time where $P$ is the derived subset target. Auxiliary space strictly bounded to $O(P)$.
+
+## Day 79: Coin Change (Unbounded Knapsack)
+- **Problem:** Calculate the absolute minimum integer count of elements required to sum to a target, given an infinite supply of each element.
+- **Concept:** Reversed the strict 0/1 Knapsack constraints. Transitioned from state maximization to state minimization (`Math.min`).
+- **Memory Optimization:** Deployed a 1D state array, utilizing **forward-iteration** to deliberately allow combinatorial compounding (infinite asset reuse).
+- **Complexity:** O(C * A) execution time where C is the number of coin denominations and A is the target amount. Auxiliary space is strictly bounded to O(A).
