@@ -420,3 +420,9 @@ Java + DSA daily practice
 - **Concept:** Modeled the DP state transitions evaluating three distinct historical routing paths upon character mismatch: `1 + min(Left, Above, Diagonal)`.
 - **Memory Optimization:** Maintained the $O(N)$ sliding array architecture from the LCS implementation, actively mutating the row initialization state to track target deletions.
 - **Complexity:** $O(M \times N)$ execution time where $M$ and $N$ are the respective string lengths. Auxiliary space is strictly bounded to $O(N)$.
+
+## Day 77: 0/1 Knapsack Problem
+- **Problem:** Maximize total accumulated value given a strict maximum weight capacity and a catalog of indivisible items.
+- **Concept:** Modeled bounded capacity using a choice state transition: `max(state[capacity], state[capacity - weight] + value)`.
+- **Memory Optimization:** Collapsed the $O(N \times W)$ matrix into a 1D `optimalValueAtCapacity` array. Deployed a **reverse-iteration strategy** to strictly enforce the single-use item constraint, preventing array-overwrite corruption.
+- **Complexity:** $O(N \times W)$ execution time where $N$ is the number of assets and $W$ is the maximum capacity. Auxiliary space strictly bounded to $O(W)$.
