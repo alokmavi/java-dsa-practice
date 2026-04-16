@@ -438,3 +438,9 @@ Java + DSA daily practice
 - **Concept:** Reversed the strict 0/1 Knapsack constraints. Transitioned from state maximization to state minimization (`Math.min`).
 - **Memory Optimization:** Deployed a 1D state array, utilizing **forward-iteration** to deliberately allow combinatorial compounding (infinite asset reuse).
 - **Complexity:** O(C * A) execution time where C is the number of coin denominations and A is the target amount. Auxiliary space is strictly bounded to O(A).
+
+## Day 80: Longest Increasing Subsequence (LIS)
+- **Problem:** Identify the maximum strictly increasing chain of elements within an unsorted array, omitting contiguous constraints.
+- **Concept:** Expanded 1D DP state transition mechanics to require a full historical scan (`0` to `i-1`) for every evaluated index to verify structural sequence legality.
+- **Architecture:** Maintained a `globalMaximumLength` tracker independent of the terminal index, acknowledging that the optimal sequence may conclude prior to the end of the data stream.
+- **Complexity:** $O(N^2)$ execution time due to the nested historical scanning loop. Auxiliary space bounded to $O(N)$ for the state tracking array.
