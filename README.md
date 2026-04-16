@@ -426,3 +426,9 @@ Java + DSA daily practice
 - **Concept:** Modeled bounded capacity using a choice state transition: `max(state[capacity], state[capacity - weight] + value)`.
 - **Memory Optimization:** Collapsed the $O(N \times W)$ matrix into a 1D `optimalValueAtCapacity` array. Deployed a **reverse-iteration strategy** to strictly enforce the single-use item constraint, preventing array-overwrite corruption.
 - **Complexity:** $O(N \times W)$ execution time where $N$ is the number of assets and $W$ is the maximum capacity. Auxiliary space strictly bounded to $O(W)$.
+
+## Day 78: Target Sum (Mathematical Reduction)
+- **Problem:** Calculate all valid `+/-` assignments across an array of integers that evaluate to a specific target integer.
+- **Concept:** Reduced a complex dual-state combinatorial problem into a standard subset-sum search by deriving the mathematical target $P = (Target + Sum) / 2$.
+- **Architecture:** Re-deployed the reverse-traversal 1D array DP engine from the 0/1 Knapsack algorithm, modifying the state transition to summate valid paths rather than maximizing values.
+- **Complexity:** $O(N \times P)$ execution time where $P$ is the derived subset target. Auxiliary space strictly bounded to $O(P)$.
