@@ -444,3 +444,9 @@ Java + DSA daily practice
 - **Concept:** Expanded 1D DP state transition mechanics to require a full historical scan (`0` to `i-1`) for every evaluated index to verify structural sequence legality.
 - **Architecture:** Maintained a `globalMaximumLength` tracker independent of the terminal index, acknowledging that the optimal sequence may conclude prior to the end of the data stream.
 - **Complexity:** $O(N^2)$ execution time due to the nested historical scanning loop. Auxiliary space bounded to $O(N)$ for the state tracking array.
+
+## Day 81: Word Break (Partition DP)
+- **Problem:** Determine if an unspaced string can be perfectly segmented into a sequence of dictionary words.
+- **Concept:** Expanded the historical scanning DP pattern to string partitioning. Evaluated substrings against a cached `HashSet` only if the preceding prefix state evaluated to `true`.
+- **Optimization:** Deployed a `break` statement inside the inner loop upon finding the first valid partition point, pruning redundant historical checks.
+- **Complexity:** $O(N^3)$ execution time. The outer loop runs $N$ times, the inner loop runs $N$ times, and the `substring()` extraction takes $O(N)$ time. Auxiliary space is bounded to $O(N)$ for the boolean array, plus the size of the dictionary cache.
