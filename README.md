@@ -456,3 +456,9 @@ Java + DSA daily practice
 - **Concept:** Applied Interval Dynamic Programming, utilizing the state transition: `dp[i][j] = (s[i] == s[j]) && dp[i+1][j-1]`.
 - **Traversal Architecture:** Bypassed standard row/column matrix traversal. Iterated dynamically by `intervalSpan` (length) to guarantee inner substrings were historically evaluated prior to outer boundary checks.
 - **Complexity:** $O(N^2)$ execution time. Auxiliary space strictly bound to $O(N^2)$ due to the 2D boolean tracking matrix. (Note: "Expand Around Center" two-pointer approach is preferred for $O(1)$ production memory constraints).
+
+## Day 83: Lexical Trie (Prefix Tree)
+- **Concept:** Modeled a high-performance character-routing tree to enable instantaneous prefix validation.
+- **Architecture:** Deployed fixed `LexicalNode[26]` arrays utilizing ASCII index mapping for strict $O(1)$ adjacent node retrieval.
+- **State Management:** Differentiated sub-paths from complete strings using a terminal boolean flag (`isTerminalNode`).
+- **Complexity:** $O(L)$ execution time for insertion and search, where $L$ is the character length of the target string. Auxiliary space is $O(T \times L)$ in the worst-case (no overlapping prefixes), where $T$ is total words.
