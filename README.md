@@ -450,3 +450,9 @@ Java + DSA daily practice
 - **Concept:** Expanded the historical scanning DP pattern to string partitioning. Evaluated substrings against a cached `HashSet` only if the preceding prefix state evaluated to `true`.
 - **Optimization:** Deployed a `break` statement inside the inner loop upon finding the first valid partition point, pruning redundant historical checks.
 - **Complexity:** $O(N^3)$ execution time. The outer loop runs $N$ times, the inner loop runs $N$ times, and the `substring()` extraction takes $O(N)$ time. Auxiliary space is bounded to $O(N)$ for the boolean array, plus the size of the dictionary cache.
+
+## Day 82: Longest Palindromic Substring (Interval DP)
+- **Problem:** Identify the maximum contiguous palindromic sequence within an unsorted string.
+- **Concept:** Applied Interval Dynamic Programming, utilizing the state transition: `dp[i][j] = (s[i] == s[j]) && dp[i+1][j-1]`.
+- **Traversal Architecture:** Bypassed standard row/column matrix traversal. Iterated dynamically by `intervalSpan` (length) to guarantee inner substrings were historically evaluated prior to outer boundary checks.
+- **Complexity:** $O(N^2)$ execution time. Auxiliary space strictly bound to $O(N^2)$ due to the 2D boolean tracking matrix. (Note: "Expand Around Center" two-pointer approach is preferred for $O(1)$ production memory constraints).
