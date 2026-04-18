@@ -468,3 +468,10 @@ Java + DSA daily practice
 - **Architecture:** Extended the standard Trie topology with a recursive Depth-First Search mechanism to handle non-deterministic routing.
 - **State Transition:** Upon encountering a wildcard, the algorithm iteratively spans the call-stack across all non-null indices within the current `LexicalNode`'s character array.
 - **Complexity:** Insertion remains strict $O(L)$. Deterministic search remains $O(L)$. Worst-case wildcard search degrades to $O(26^L)$ time complexity when queried with purely ambiguous patterns (e.g., `.......`), bounded by the topological density of the tree.
+
+## Day 85: Disjoint Set (Union-Find)
+- **Problem:** Dynamically track network connectivity and detect cyclical graph redundancies in near-constant time.
+- **Architecture:** Implemented a 1D state array simulating a hierarchical tree structure. 
+- **Optimizations:** 1. **Path Compression:** Flattened traversal chains recursively during the `Find` operation.
+  2. **Union by Size:** Bound total depth growth by continuously appending smaller independent networks beneath larger primary networks.
+- **Complexity:** Amortized $O(\alpha(N))$ time complexity for both Find and Union, effectively establishing $O(1)$ execution time. Auxiliary space strictly bound to $O(N)$ for state tracking arrays.
