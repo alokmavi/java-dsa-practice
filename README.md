@@ -462,3 +462,9 @@ Java + DSA daily practice
 - **Architecture:** Deployed fixed `LexicalNode[26]` arrays utilizing ASCII index mapping for strict $O(1)$ adjacent node retrieval.
 - **State Management:** Differentiated sub-paths from complete strings using a terminal boolean flag (`isTerminalNode`).
 - **Complexity:** $O(L)$ execution time for insertion and search, where $L$ is the character length of the target string. Auxiliary space is $O(T \times L)$ in the worst-case (no overlapping prefixes), where $T$ is total words.
+
+## Day 84: Trie DFS & Wildcard Matching
+- **Problem:** Design a data structure supporting $O(L)$ insertion and search capabilities while accommodating ambiguous wildcard characters (`.`).
+- **Architecture:** Extended the standard Trie topology with a recursive Depth-First Search mechanism to handle non-deterministic routing.
+- **State Transition:** Upon encountering a wildcard, the algorithm iteratively spans the call-stack across all non-null indices within the current `LexicalNode`'s character array.
+- **Complexity:** Insertion remains strict $O(L)$. Deterministic search remains $O(L)$. Worst-case wildcard search degrades to $O(26^L)$ time complexity when queried with purely ambiguous patterns (e.g., `.......`), bounded by the topological density of the tree.
