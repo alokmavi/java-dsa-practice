@@ -481,3 +481,9 @@ Java + DSA daily practice
 - **Concept:** Fused a greedy sorting mechanism with a Disjoint Set architecture. Evaluated edges in strictly ascending cost order, leveraging `establishConnection()` to reject cyclical redundancies dynamically.
 - **Optimization:** Implemented a short-circuit termination condition, aborting the loop the moment exactly $V - 1$ edges are successfully committed to the structural state.
 - **Complexity:** $O(E \log E)$ execution time dominated entirely by the array sorting phase. Auxiliary space is bounded to $O(V)$ for the Disjoint Set tracking arrays.
+
+## Day 87: LRU Cache
+- **Problem:** Design a fixed-capacity memory cache that automatically evicts the least recently accessed temporal data in strict $O(1)$ time.
+- **Architecture:** Engineered a hybrid data structure bridging a `HashMap` (for instant memory address lookup) with a custom `DoublyLinkedList` (for instant pointer-based recency mutations).
+- **Optimization:** Deployed fixed `headSentinel` and `tailSentinel` nodes to guarantee unhindered pointer reassignment boundaries, structurally eliminating Null Reference exceptions.
+- **Complexity:** $O(1)$ execution time for both `insertRecord` and `retrieveRecord`. Auxiliary space strictly bounded to $O(C)$ where $C$ is the parameterized `maximumCapacity`.
