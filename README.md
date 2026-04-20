@@ -487,3 +487,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a hybrid data structure bridging a `HashMap` (for instant memory address lookup) with a custom `DoublyLinkedList` (for instant pointer-based recency mutations).
 - **Optimization:** Deployed fixed `headSentinel` and `tailSentinel` nodes to guarantee unhindered pointer reassignment boundaries, structurally eliminating Null Reference exceptions.
 - **Complexity:** $O(1)$ execution time for both `insertRecord` and `retrieveRecord`. Auxiliary space strictly bounded to $O(C)$ where $C$ is the parameterized `maximumCapacity`.
+
+## Day 88: Bloom Filter
+- **Problem:** Filter millions of database queries in constant time without allocating unbounded memory for string storage.
+- **Architecture:** Engineered a probabilistic data structure utilizing a `BitSet` and multiple orthogonal hash functions (`computeHashDispersions`).
+- **State Guarantee:** Yields a $0\%$ false-negative rate, aggressively aborting queries for nonexistent data. Accepts a predictable false-positive rate dependent on load factor and bit array size.
+- **Complexity:** $O(K \times L)$ execution time where $K$ is the number of hash functions and $L$ is the string length. Auxiliary space is strict $O(1)$ relative to the number of stored items, bound exclusively by the predefined `bitArrayCapacity`.
