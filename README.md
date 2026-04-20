@@ -475,3 +475,9 @@ Java + DSA daily practice
 - **Optimizations:** 1. **Path Compression:** Flattened traversal chains recursively during the `Find` operation.
   2. **Union by Size:** Bound total depth growth by continuously appending smaller independent networks beneath larger primary networks.
 - **Complexity:** Amortized $O(\alpha(N))$ time complexity for both Find and Union, effectively establishing $O(1)$ execution time. Auxiliary space strictly bound to $O(N)$ for state tracking arrays.
+
+## Day 86: Kruskal's Algorithm (Minimum Spanning Tree)
+- **Problem:** Calculate the absolute minimum cumulative edge weight required to connect all vertices in an undirected graph without forming cycles.
+- **Concept:** Fused a greedy sorting mechanism with a Disjoint Set architecture. Evaluated edges in strictly ascending cost order, leveraging `establishConnection()` to reject cyclical redundancies dynamically.
+- **Optimization:** Implemented a short-circuit termination condition, aborting the loop the moment exactly $V - 1$ edges are successfully committed to the structural state.
+- **Complexity:** $O(E \log E)$ execution time dominated entirely by the array sorting phase. Auxiliary space is bounded to $O(V)$ for the Disjoint Set tracking arrays.
