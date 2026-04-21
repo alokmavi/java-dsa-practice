@@ -499,3 +499,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a fixed-size integer array governed by independent `writeHead` and `readTail` pointers tracking the cyclical state.
 - **State Guarantee:** Utilized modulo arithmetic `(index + 1) % capacity` to seamlessly wrap pointers across the array boundaries, decoupling data ingestion from data consumption.
 - **Complexity:** Strict $O(1)$ execution time for all read, write, and state query operations. Auxiliary space is firmly capped at the pre-allocated $O(C)$ capacity.
+
+## Day 90: Rabin-Karp Algorithm (Rolling Hash)
+- **Problem:** Locate a substring within a continuous character stream avoiding $O(N \times M)$ redundant boundary checks.
+- **Architecture:** Engineered a Rolling Hash mechanism operating across an `ALPHABET_BASE` bounded by a cryptographic `PRIME_MODULUS`.
+- **State Guarantee:** Window mutation executes in strict $O(1)$ constant time by subtracting the leading coefficient and appending the trailing coefficient dynamically. False positives via integer collisions are structurally mitigated by a physical fallback verification.
+- **Complexity:** $O(N + M)$ average execution time. Worst-case scenario degrades to $O(N \times M)$ exclusively in pathological architectures resulting in continuous, unbroken hash collisions. Auxiliary space is bounded to strict $O(1)$.
