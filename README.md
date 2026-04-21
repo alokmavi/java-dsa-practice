@@ -493,3 +493,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a probabilistic data structure utilizing a `BitSet` and multiple orthogonal hash functions (`computeHashDispersions`).
 - **State Guarantee:** Yields a $0\%$ false-negative rate, aggressively aborting queries for nonexistent data. Accepts a predictable false-positive rate dependent on load factor and bit array size.
 - **Complexity:** $O(K \times L)$ execution time where $K$ is the number of hash functions and $L$ is the string length. Auxiliary space is strict $O(1)$ relative to the number of stored items, bound exclusively by the predefined `bitArrayCapacity`.
+
+## Day 89: Circular Buffer (Ring Buffer)
+- **Problem:** Design a fixed-size queue for continuous time-series data streams avoiding $O(N)$ index shifts and GC reallocation overhead.
+- **Architecture:** Engineered a fixed-size integer array governed by independent `writeHead` and `readTail` pointers tracking the cyclical state.
+- **State Guarantee:** Utilized modulo arithmetic `(index + 1) % capacity` to seamlessly wrap pointers across the array boundaries, decoupling data ingestion from data consumption.
+- **Complexity:** Strict $O(1)$ execution time for all read, write, and state query operations. Auxiliary space is firmly capped at the pre-allocated $O(C)$ capacity.
