@@ -505,3 +505,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a Rolling Hash mechanism operating across an `ALPHABET_BASE` bounded by a cryptographic `PRIME_MODULUS`.
 - **State Guarantee:** Window mutation executes in strict $O(1)$ constant time by subtracting the leading coefficient and appending the trailing coefficient dynamically. False positives via integer collisions are structurally mitigated by a physical fallback verification.
 - **Complexity:** $O(N + M)$ average execution time. Worst-case scenario degrades to $O(N \times M)$ exclusively in pathological architectures resulting in continuous, unbroken hash collisions. Auxiliary space is bounded to strict $O(1)$.
+
+## Day 91: Knuth-Morris-Pratt (KMP) Algorithm
+- **Problem:** Locate a substring within a continuous character stream while strictly eliminating `textStream` pointer backtracking.
+- **Architecture:** Engineered a deterministic finite automaton utilizing a pre-computed Longest Prefix Suffix (LPS) array.
+- **State Guarantee:** Mismatches trigger an instantaneous $O(1)$ internal pattern shift based on historical prefix overlaps, guaranteeing that the primary data stream is read exactly once, strictly forwards.
+- **Complexity:** $O(N + M)$ execution time where $N$ is the stream length and $M$ is the pattern length. Absolute worst-case scenario remains $O(N + M)$ (unlike Rabin-Karp). Auxiliary space is strictly bounded to $O(M)$ for the state tracking LPS array.
