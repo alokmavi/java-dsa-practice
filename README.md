@@ -511,3 +511,10 @@ Java + DSA daily practice
 - **Architecture:** Engineered a deterministic finite automaton utilizing a pre-computed Longest Prefix Suffix (LPS) array.
 - **State Guarantee:** Mismatches trigger an instantaneous $O(1)$ internal pattern shift based on historical prefix overlaps, guaranteeing that the primary data stream is read exactly once, strictly forwards.
 - **Complexity:** $O(N + M)$ execution time where $N$ is the stream length and $M$ is the pattern length. Absolute worst-case scenario remains $O(N + M)$ (unlike Rabin-Karp). Auxiliary space is strictly bounded to $O(M)$ for the state tracking LPS array.
+
+## Day 92: Aho-Corasick Algorithm
+- **Problem:** Execute multi-pattern substring detection against a continuous character stream in strict linear time.
+- **Architecture:** Engineered a deterministic finite automaton fusing a Lexical Trie with a pre-compiled failure-link network via Breadth-First Search.
+- **State Guarantee:** Employed defensive architectural states (`isCompiled`) separating the structural mutation phase (ingestion) from the operational read phase (search). Sub-pattern overlaps (e.g., subsets within larger matched strings) are pre-computed during the BFS to guarantee strict $O(1)$ terminal resolution during execution.
+- **Complexity:** - Compilation: $O(M)$ time and space where $M$ is the combined length of all ingested vocabulary signatures.
+  - Execution: $O(N + Z)$ time where $N$ is the length of the data stream and $Z$ is the total number of physical signature matches identified. Auxiliary space during execution is strict $O(1)$ relative to the automaton topology.
