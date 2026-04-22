@@ -518,3 +518,12 @@ Java + DSA daily practice
 - **State Guarantee:** Employed defensive architectural states (`isCompiled`) separating the structural mutation phase (ingestion) from the operational read phase (search). Sub-pattern overlaps (e.g., subsets within larger matched strings) are pre-computed during the BFS to guarantee strict $O(1)$ terminal resolution during execution.
 - **Complexity:** - Compilation: $O(M)$ time and space where $M$ is the combined length of all ingested vocabulary signatures.
   - Execution: $O(N + Z)$ time where $N$ is the length of the data stream and $Z$ is the total number of physical signature matches identified. Auxiliary space during execution is strict $O(1)$ relative to the automaton topology.
+
+## Day 93: Segment Tree (Range Queries)
+- **Problem:** Overcome the $O(N)$ execution bottleneck associated with running simultaneous point-updates and range-queries on a continuous dataset.
+- **Architecture:** Engineered a flat-array binary segment tree (sizing rule: $4 \times N$) resolving sub-array state sums hierarchically.
+- **State Management:** Range queries operate on a three-state resolution matrix: Total Overlap (instant return), No Overlap (branch termination), and Partial Overlap (recursive fracture).
+- **Complexity:** - Construction: $O(N)$ time, calculating the baseline sum cache.
+  - Updates: $O(\log N)$ time, bounding traversal strictly to the depth of the binary tree.
+  - Range Queries: $O(\log N)$ time, neutralizing out-of-bound branches instantaneously.
+  - Space: Strict $O(N)$ auxiliary allocation.
