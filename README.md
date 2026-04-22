@@ -535,3 +535,11 @@ Java + DSA daily practice
 - **Complexity:** - Compilation: $O(N \log N)$ time utilizing sequential point updates.
   - Updates & Queries: $O(\log N)$ execution time driven purely by bitwise shifting.
   - Auxiliary Space: Strict $O(N)$ allocation, cutting the Segment Tree memory footprint by 75%.
+
+## Day 95: Quadtree (Spatial Indexing)
+- **Problem:** Execute multi-dimensional coordinate containment queries without suffering $O(N)$ linear dataset scans.
+- **Architecture:** Engineered a recursive 2D space-partitioning tree. Nodes allocate memory dynamically, fracturing into quaternary sectors strictly upon breaching `nodeCapacity` constraints.
+- **State Guarantee:** Query traversal executes mathematical intersection validation (`designatedBoundary.intersects()`), guaranteeing massive swathes of irrelevant topographical data are instantly truncated from the call stack.
+- **Complexity:** - Insertion: Average $O(\log N)$ time, bound by tree depth.
+  - Query: $O(\log N + K)$ time, where $K$ represents the total physical elements encapsulated by the query boundary.
+  - Space: $O(N)$ auxiliary allocation.
