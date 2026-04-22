@@ -527,3 +527,11 @@ Java + DSA daily practice
   - Updates: $O(\log N)$ time, bounding traversal strictly to the depth of the binary tree.
   - Range Queries: $O(\log N)$ time, neutralizing out-of-bound branches instantaneously.
   - Space: Strict $O(N)$ auxiliary allocation.
+
+## Day 94: Binary Indexed Tree (Fenwick Tree)
+- **Problem:** Execute point updates and range queries in logarithmic time under strict linear memory constraints, bypassing recursive overhead.
+- **Architecture:** Engineered a flat 1D array utilizing two's complement bitwise logic (`x & -x`) to dynamically simulate a hierarchical tree structure based on index binary representations.
+- **State Guarantee:** Mapped all 0-based client requests to a strict 1-based internal array to prevent structural infinite loops caused by zero-value bit shifts.
+- **Complexity:** - Compilation: $O(N \log N)$ time utilizing sequential point updates.
+  - Updates & Queries: $O(\log N)$ execution time driven purely by bitwise shifting.
+  - Auxiliary Space: Strict $O(N)$ allocation, cutting the Segment Tree memory footprint by 75%.
