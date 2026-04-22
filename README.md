@@ -543,3 +543,9 @@ Java + DSA daily practice
 - **Complexity:** - Insertion: Average $O(\log N)$ time, bound by tree depth.
   - Query: $O(\log N + K)$ time, where $K$ represents the total physical elements encapsulated by the query boundary.
   - Space: $O(N)$ auxiliary allocation.
+
+## Day 96: Maximum Flow (Ford-Fulkerson / Edmonds-Karp)
+- **Problem:** Calculate the absolute maximum volumetric throughput capable of traversing a directed graph from a strict source to a strict sink without exceeding edge capacities.
+- **Architecture:** Engineered a residual graph tracking system. Deployed the Edmonds-Karp variant, utilizing Breadth-First Search (BFS) to identify shortest augmenting paths.
+- **State Guarantee:** Mitigated greedy pathfinding dead-ends by strictly implementing reciprocal back-edges (`residual[back][front] += bottleneck`), granting the network the mathematical ability to un-route and re-optimize flow iteratively.
+- **Complexity:** $O(V \times E^2)$ execution time bounding due to the Edmonds-Karp BFS path selection constraint. Auxiliary space is $O(V^2)$ necessitated by the `residualGraph` matrix allocation.
