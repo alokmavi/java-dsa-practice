@@ -549,3 +549,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a residual graph tracking system. Deployed the Edmonds-Karp variant, utilizing Breadth-First Search (BFS) to identify shortest augmenting paths.
 - **State Guarantee:** Mitigated greedy pathfinding dead-ends by strictly implementing reciprocal back-edges (`residual[back][front] += bottleneck`), granting the network the mathematical ability to un-route and re-optimize flow iteratively.
 - **Complexity:** $O(V \times E^2)$ execution time bounding due to the Edmonds-Karp BFS path selection constraint. Auxiliary space is $O(V^2)$ necessitated by the `residualGraph` matrix allocation.
+
+## Day 97: Strongly Connected Components (Kosaraju's Algorithm)
+- **Problem:** Identify all isolated sub-graphs within a directed network where a continuous cyclic path connects every contained vertex.
+- **Architecture:** Engineered a two-pass DFS algorithm utilizing a topological finish-time stack (`Deque`) and a structurally transposed adjacency list.
+- **State Guarantee:** By traversing the transposed graph strictly in the reverse finish-time order, the DFS is physically prohibited from escaping an SCC via outward-pointing edges, cleanly isolating components without overlapping traversal states.
+- **Complexity:** $O(V + E)$ absolute linear execution time, strictly traversing the forward and transposed networks exactly once. Auxiliary space is bounded to $O(V + E)$ due to the necessity of storing the transposed adjacency matrix.
