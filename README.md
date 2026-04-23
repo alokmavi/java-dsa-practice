@@ -555,3 +555,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a two-pass DFS algorithm utilizing a topological finish-time stack (`Deque`) and a structurally transposed adjacency list.
 - **State Guarantee:** By traversing the transposed graph strictly in the reverse finish-time order, the DFS is physically prohibited from escaping an SCC via outward-pointing edges, cleanly isolating components without overlapping traversal states.
 - **Complexity:** $O(V + E)$ absolute linear execution time, strictly traversing the forward and transposed networks exactly once. Auxiliary space is bounded to $O(V + E)$ due to the necessity of storing the transposed adjacency matrix.
+
+## Day 98: Critical Connections (Tarjan's Bridge-Finding Algorithm)
+- **Problem:** Identify all Single Points of Failure (SPOFs) within an undirected network architecture where the removal of the edge fractures the graph into disconnected components.
+- **Architecture:** Engineered a one-pass DFS tracker utilizing parallel integer arrays (`discoveryTimeline` and `lowestReachableState`).
+- **State Guarantee:** By actively comparing the absolute earliest topological timestamp an adjacent node can mathematically reach against the current node's initial timestamp, the algorithm dynamically isolates edges lacking cyclical back-routes.
+- **Complexity:** $O(V + E)$ absolute linear execution time. Auxiliary space strictly bounded to $O(V + E)$ for the adjacency matrix translation, and $O(V)$ for the parallel tracking arrays and call stack.
