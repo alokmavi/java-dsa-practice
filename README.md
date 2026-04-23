@@ -561,3 +561,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a one-pass DFS tracker utilizing parallel integer arrays (`discoveryTimeline` and `lowestReachableState`).
 - **State Guarantee:** By actively comparing the absolute earliest topological timestamp an adjacent node can mathematically reach against the current node's initial timestamp, the algorithm dynamically isolates edges lacking cyclical back-routes.
 - **Complexity:** $O(V + E)$ absolute linear execution time. Auxiliary space strictly bounded to $O(V + E)$ for the adjacency matrix translation, and $O(V)$ for the parallel tracking arrays and call stack.
+
+## Day 99: A* Search (Heuristic Pathfinding)
+- **Problem:** Overcome the algorithmic inefficiency of uniform-cost search expansions (Dijkstra's) across massive grids by prioritizing directional geographic movement.
+- **Architecture:** Engineered a PriorityQueue-driven routing engine evaluating sectors via $f(n) = g(n) + h(n)$. Applied the Manhattan Distance mathematical heuristic to estimate terminal proximity dynamically.
+- **State Guarantee:** Maintained structural pointer integrity via a 2D `coordinateRegistry`, ensuring absolute node singularity during cost mutations and preventing duplicate object allocation in high-frequency routing scenarios.
+- **Complexity:** Average execution time significantly outperforms $O(V \log V)$ uniform searches due to heuristic pruning. Worst-case execution devolves to $O(E \log V)$ exclusively when evaluating pathological topologies containing inescapable physical concavities. Auxiliary space bounded to $O(V)$.
