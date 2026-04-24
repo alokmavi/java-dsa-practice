@@ -567,3 +567,9 @@ Java + DSA daily practice
 - **Architecture:** Engineered a PriorityQueue-driven routing engine evaluating sectors via $f(n) = g(n) + h(n)$. Applied the Manhattan Distance mathematical heuristic to estimate terminal proximity dynamically.
 - **State Guarantee:** Maintained structural pointer integrity via a 2D `coordinateRegistry`, ensuring absolute node singularity during cost mutations and preventing duplicate object allocation in high-frequency routing scenarios.
 - **Complexity:** Average execution time significantly outperforms $O(V \log V)$ uniform searches due to heuristic pruning. Worst-case execution devolves to $O(E \log V)$ exclusively when evaluating pathological topologies containing inescapable physical concavities. Auxiliary space bounded to $O(V)$.
+
+## Day 100: System Rate Limiter (Token Bucket Algorithm)
+- **Problem:** Protect distributed system infrastructure from DDoS attacks and cascading failures by dropping excess network traffic in strict $O(1)$ time.
+- **Architecture:** Engineered a thread-safe Token Bucket utilizing `ReentrantLock` for concurrency control and monotonic hardware timers (`System.nanoTime()`) for temporal precision.
+- **State Guarantee:** Deployed **Lazy Evaluation** to calculate token regeneration dynamically upon request ingestion, entirely bypassing the memory and CPU overhead of instantiating dedicated background polling threads.
+- **Complexity:** $O(1)$ execution time and $O(1)$ auxiliary space. The system scales infinitely with user base size, restricted solely by thread contention at the hardware lock level.
